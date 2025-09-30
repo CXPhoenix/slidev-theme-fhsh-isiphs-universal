@@ -1,6 +1,13 @@
 <script setup>
 import Section from "./section.vue";
-import Slogon from "../assets/slogon.svg";
+import { useSlideContext } from "@slidev/client";
+import useTheme from "../shared/useTheme";
+
+const { $slidev } = useSlideContext();
+const { $themeImg, $customThemeConfig } = useTheme;
+
+const themeName = $customThemeConfig($slidev.configs).themeName
+const { slogonImg } = $themeImg(themeName);
 </script>
 
 <template>
@@ -10,9 +17,13 @@ import Slogon from "../assets/slogon.svg";
     </div>
   </Section>
   <img
-    :src="Slogon"
+    :src="slogonImg"
     alt="FHSH AiSP title"
-    class="absolute top-[56%] left-[8%] w-[42%]"
+    class="absolute left-[8%] w-[42%]"
+    :class="{
+      'top-[50%]': themeName == 'isip.hs',
+      'top-[56%]': themeName == 'fhsh',
+    }"
   />
 </template>
 

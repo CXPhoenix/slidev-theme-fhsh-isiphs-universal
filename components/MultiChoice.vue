@@ -66,10 +66,10 @@ const chooseAnswer = (choice) => {
           <div
             v-for="(option, idx) in question_page[question_page.length - 1]"
             :key="option"
-            class="w-full rounded-lg border-2 hover:border-stone-600 shadow-lg cursor-pointer"
+            class="w-full flex justify-center items-start flex-col rounded-lg border-2 hover:border-stone-600 shadow-lg cursor-pointer"
             :class="{
               'border-4 border-green-800 bg-green-400':
-                lock && answer === ans && answer === idx + 1,
+                lock && answer === idx + 1 && answer === ans,
               'border-4 border-red-800 bg-rose-400':
                 lock && answer === idx + 1 && answer !== ans,
               'border-4 border-yellow-800 bg-yellow-400':

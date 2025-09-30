@@ -1,23 +1,42 @@
-# 🎨 Slidev Theme FHSH AiSP
+# 🎨 Slidev Theme FHSH & ISIP.hs Universal
 
-[![NPM version](https://img.shields.io/npm/v/@cxphoenix/slidev-theme-fhsh-aisp?color=3AB9D4&label=pnpm)](https://www.npmjs.com/package/@cxphoenix/slidev-theme-fhsh-aisp/v/latest)
-[![License](https://img.shields.io/github/license/CXPhoenix/slidev-theme-fhsh-aisp?color=green)](https://github.com/CXPhoenix/slidev-theme-fhsh-aisp/blob/main/LICENSE)
-[![Node.js](https://img.shields.io/node/v/@cxphoenix/slidev-theme-fhsh-aisp)](https://nodejs.org/)
+[![NPM version](https://img.shields.io/npm/v/@cxphoenix/slidev-theme-fhsh-isiphs-universal?color=3AB9D4&label=npm)](https://www.npmjs.com/package/@cxphoenix/slidev-theme-fhsh-isiphs-universal/v/latest)
+[![License](https://img.shields.io/github/license/CXPhoenix/slidev-theme-fhsh-isiphs-universal?color=green)](https://github.com/CXPhoenix/slidev-theme-fhsh-isiphs-universal/blob/main/LICENSE)
+[![Node.js](https://img.shields.io/node/v/@cxphoenix/slidev-theme-fhsh-isiphs-universal)](https://nodejs.org/)
 
 ## 📖 專案介紹
 
-✨ **Slidev Theme FHSH AiSP** 是專為復興高中 AI 資安學程（FHSH AiSP）設計的專業 [Slidev](https://github.com/slidevjs/slidev) 主題佈景。這個主題結合了現代化的設計美學與教育簡報的實用性，為學術演講和技術分享提供了完美的視覺體驗。
+✨ **Slidev Theme FHSH & ISIP.hs Universal** 是一個專為復興高中資安相關課程設計的通用 [Slidev](https://github.com/slidevjs/slidev) 主題佈景。此主題整合了 **FHSH AiSP（AI 資安學程）** 與 **ISIP.hs（資訊安全實務課程）** 兩個主題的所有功能，提供靈活的雙主題切換系統與課程等級色彩配置。
+
+### 🎯 設計理念
+
+這個主題將兩個獨立的 Slidev 主題整合為一個通用解決方案，讓教師與學生能夠：
+- 🔄 **彈性切換**：使用單一主題套件，透過設定切換不同課程的視覺風格
+- 🎨 **等級區分**：透過顏色系統直觀區分課程難度（初級/中級/高級）
+- 📚 **統一管理**：在同一個專案中管理不同課程的簡報內容
 
 ### 🌟 主題特色
 
-- 🎯 **專業設計**：專為 AI 資安學程量身打造的視覺風格
+#### 🎭 雙主題整合系統
+- **FHSH AiSP 主題**：專為 AI 資安學程設計的專業視覺風格
+- **ISIP.hs 主題**：資訊安全實務課程專屬的簡潔設計
+- **一鍵切換**：透過 `themeName` 參數快速切換主題圖片資源
+
+#### 🎚️ 課程等級色彩系統
+根據課程難度自動調整背景配色，提供視覺化的課程分級：
+- 🟢 **Level 0 - 初級課程**：清新綠色調，適合入門內容
+- 🔵 **Level 1 - 中級課程**：專業藍色調，適合進階主題
+- 🟠 **Level 2 - 高級課程**：活力橘色調，適合深度探討
+
+#### 🎯 核心功能
 - 🚀 **現代化介面**：簡潔優雅的設計語言，突出內容重點
-- 🎨 **多元版面**：提供封面、內容、章節、圖片等多種版面配置
+- 🎨 **多元版面**：提供 5 種精心設計的版面配置（封面、內容、章節、圖片、測驗）
+- 🧩 **自訂組件**：內建目錄（ToC）與互動測驗（MultiChoice）組件
 - 📱 **響應式設計**：支援不同螢幕尺寸的最佳顯示效果
-- 🔤 **中文最佳化**：針對繁體中文內容進行字體與排版優化
+- 🔤 **中文最佳化**：使用 edukai 字體，針對繁體中文進行排版優化
 - ⚡ **高效能**：基於 Slidev 的輕量化架構，快速載入與流暢操作
+- 💻 **程式碼增強**：整合 Monaco editor 與 Shiki 語法突顯
 - 🎪 **豐富動效**：內建精美的過場動畫與互動效果
-- 🎮 **互動測驗**：內建測驗功能，支援多選題與即時反饋
 
 ## 🚀 安裝與設定
 
@@ -37,7 +56,7 @@
 
 ```yaml
 ---
-theme: '@cxphoenix/slidev-theme-fhsh-aisp'
+theme: '@cxphoenix/slidev-theme-fhsh-isiphs-universal'
 ---
 
 # 您的簡報標題
@@ -51,13 +70,13 @@ theme: '@cxphoenix/slidev-theme-fhsh-aisp'
 
 ```bash
 # 使用 pnpm（推薦）
-pnpm add @cxphoenix/slidev-theme-fhsh-aisp
+pnpm add @cxphoenix/slidev-theme-fhsh-isiphs-universal
 
 # 使用 npm
-npm install @cxphoenix/slidev-theme-fhsh-aisp
+npm install @cxphoenix/slidev-theme-fhsh-isiphs-universal
 
 # 使用 yarn
-yarn add @cxphoenix/slidev-theme-fhsh-aisp
+yarn add @cxphoenix/slidev-theme-fhsh-isiphs-universal
 ```
 
 ### 🔧 基本設定
@@ -66,20 +85,92 @@ yarn add @cxphoenix/slidev-theme-fhsh-aisp
 
 ```yaml
 ---
-theme: '@cxphoenix/slidev-theme-fhsh-aisp'
+theme: '@cxphoenix/slidev-theme-fhsh-isiphs-universal'
 title: '我的簡報'
+# 主題名稱：'fhsh' 或 'isip.hs'
+themeName: 'fhsh'
+# 課程等級：0 (初級/綠) | 1 (中級/藍) | 2 (高級/橘)
+courseLevel: 0
 info: |
-  ## FHSH AiSP 簡報
-  使用 Slidev Theme FHSH AiSP 製作
+  ## FHSH & ISIP.hs 通用主題
+  使用 Slidev Theme FHSH & ISIP.hs Universal 製作
 fonts:
-  sans: 'Noto Sans TC'
-  mono: 'Fira Code'
+  sans: 'edukai, Noto Sans TC'
+  serif: 'Zen Antique, Noto Serif Traditional Chinese'
+  mono: 'Source Code Pro, Noto Sans Mono'
 aspectRatio: '16/9'
 layout: 'default'
 ---
 ```
 
-更多進階設定選項，請參考 [使用說明](./Usage.md) 或 [Slidev 官方文件](https://sli.dev/guide/theme-addon#use-theme)。
+## ⚙️ 主題配置
+
+### 🎨 themeName（主題名稱）
+
+控制主題的視覺風格與圖片資源：
+
+| 參數值 | 說明 | 適用課程 |
+|--------|------|----------|
+| `fhsh` | FHSH AiSP 主題風格 | AI 資安學程相關課程 |
+| `isip.hs` | ISIP.hs 主題風格 | 資訊安全實務課程 |
+
+**使用範例**：
+```yaml
+---
+theme: '@cxphoenix/slidev-theme-fhsh-isiphs-universal'
+themeName: 'isip.hs'
+---
+```
+
+### 🎚️ courseLevel（課程等級）
+
+控制簡報的背景顏色配置，提供視覺化的課程難度區分：
+
+| 等級 | 顏色 | 說明 | 適用範圍 |
+|------|------|------|----------|
+| `0` | 🟢 綠色 | 初級課程 | 基礎入門、概念介紹 |
+| `1` | 🔵 藍色 | 中級課程 | 進階主題、實務應用 |
+| `2` | 🟠 橘色 | 高級課程 | 深度探討、專業領域 |
+
+**使用範例**：
+```yaml
+---
+theme: '@cxphoenix/slidev-theme-fhsh-isiphs-universal'
+themeName: 'fhsh'
+courseLevel: 1  # 中級課程，使用藍色背景
+---
+```
+
+### 🎯 完整配置範例
+
+```yaml
+---
+# 主題設定
+theme: '@cxphoenix/slidev-theme-fhsh-isiphs-universal'
+themeName: 'fhsh'        # 使用 FHSH AiSP 風格
+courseLevel: 2           # 高級課程（橘色）
+
+# 基本資訊
+title: 'AI 資安進階課程'
+info: |
+  ## AI 資安進階專題
+  深入探討人工智慧在資安領域的應用
+
+# 字體設定（使用主題預設）
+fonts:
+  sans: 'edukai, Noto Sans TC'
+  mono: 'Source Code Pro'
+
+# 簡報設定
+aspectRatio: '16/9'
+layout: 'default'
+
+# 版面跳過設定
+skipPageNumberLayouts:
+  - cover
+  - section
+---
+```
 
 ## 🖼️ 版面配置
 
@@ -89,63 +180,183 @@ layout: 'default'
 
 | 版面名稱 | 用途說明 | 特色功能 |
 |---------|---------|---------|
-| 🏠 `cover` | 封面頁面 | 專業的標題展示，包含 FHSH AiSP 專屬標誌 |
-| 📝 `default` | 標準內容 | 適合一般內容展示，支援標題、段落、清單等 |
-| 🏷️ `section` | 章節分隔 | 大標題置中顯示，用於章節切換 |
-| 🖼️ `image` | 圖片展示 | 全背景圖片顯示，適合視覺化內容 |
-| 🎮 `quiz` | 互動測驗 | 多選題測驗功能（目前僅支援離線模式，🚧 線上模式開發中） |
+| 🏠 `cover` | 封面頁面 | 專業的標題展示，自動套用主題專屬標誌與口號圖片 |
+| 📝 `default` | 標準內容 | 適合一般內容展示，支援標題、段落、清單、程式碼等 |
+| 🏷️ `section` | 章節分隔 | 大標題置中顯示，用於章節切換與內容分段 |
+| 🖼️ `image` | 圖片展示 | 全背景圖片顯示，適合視覺化內容與重點圖片 |
+| 🎮 `quiz` | 互動測驗 | 多選題測驗功能，支援答案驗證與視覺反饋 |
 
 ### 💡 版面使用範例
 
+#### 🏠 封面頁面（cover）
 ```markdown
 ---
 layout: cover
+themeName: 'fhsh'
+courseLevel: 0
 ---
 
 # 復興高中 AI 資安學程
-## 主題簡報
-復興高中
+## 初級課程：資安基礎概念
+2024 春季班
+```
 
----
-layout: section
----
-
-# 第一章：基礎概念
-
+#### 📝 標準內容（default）
+```markdown
 ---
 layout: default
 ---
 
-# 標準內容頁面
+# 課程內容
 
-- 項目一
-- 項目二
-- 項目三
+## 本週主題
 
+- 網路安全基礎
+- 密碼學概論
+- 常見攻擊手法
+
+### 學習目標
+了解基本的資訊安全概念與防護方法。
+```
+
+#### 🏷️ 章節分隔（section）
+```markdown
+---
+layout: section
+---
+
+# 第一章：網路安全基礎
+
+## 認識網路威脅與防護
+```
+
+#### 🖼️ 圖片展示（image）
+```markdown
 ---
 layout: image
-image: 'https://source.unsplash.com/1920x1080/?technology'
 ---
 
-# 圖片背景頁面
+# 網路架構示意圖
 
+![網路拓撲](/assets/network-topology.png)
+```
+
+#### 🎮 互動測驗（quiz）
+```markdown
 ---
 layout: quiz
-ans: 3
 isOffline: true
+ans: 4
 ---
 
-# 下列何者是機器學習的主要類型？
+# 下列何者是資訊安全的三大要素？
 
 請選擇正確答案：
 
-- 監督式學習
-- 非監督式學習  
-- 強化學習
+- 機密性
+- 完整性
+- 可用性
 - 以上皆是
 ```
 
-詳細的版面配置使用方法，請參考 [使用說明](./Usage.md)。
+## 🧩 自訂組件
+
+### 📑 ToC（目錄組件）
+
+自動產生簡報目錄，支援自訂顯示範圍與版面篩選。
+
+**基本使用**：
+```markdown
+---
+layout: default
+---
+
+# 課程大綱
+
+<ToC />
+```
+
+**進階設定**：
+```markdown
+<ToC
+  :layoutsIncludeInToc="['section', 'default']"
+  :tocShowRange="[0, 5]"
+/>
+```
+
+**Props 說明**：
+- `layoutsIncludeInToc`：指定要包含在目錄中的版面類型（預設：`['section']`）
+- `tocShowRange`：目錄顯示範圍陣列
+  - `[0]`：從第 0 項開始顯示全部
+  - `[0, 5]`：顯示第 0-4 項（共 5 項）
+
+### 🎯 MultiChoice（互動測驗組件）
+
+提供互動式多選題測驗功能，支援答案驗證與視覺反饋。
+
+**基本使用**：
+```markdown
+---
+layout: quiz
+isOffline: true
+ans: 2
+---
+
+# 什麼是 SQL Injection？
+
+測試題目描述...
+
+- 一種網路協定
+- 一種資料隱碼攻擊
+- 一種加密演算法
+- 一種防火牆技術
+```
+
+**Props 說明**：
+- `isOffline`：是否使用離線模式（預設：`true`）
+  - `true`：本地答案驗證
+  - `false`：WebSocket 連線模式（🚧 開發中）
+- `ans`：正確答案編號（從 1 開始計數，0 表示不顯示正確答案）
+- `wsUrl`：WebSocket 伺服器位址（僅在線模式需要，預設：`ws://localhost:8000`）
+
+**答案反饋**：
+- 🟢 **綠色邊框**：答案正確
+- 🔴 **紅色邊框**：答案錯誤
+- 🟡 **黃色邊框**：已選擇但未設定正確答案（ans: 0）
+
+## 💻 程式碼功能
+
+### 🎨 語法突顯（Shiki）
+
+使用 Shiki 提供精美的語法突顯，支援多種程式語言：
+
+```python
+# Python 範例
+def hello_world():
+    print("Hello, World!")
+```
+
+```javascript
+// JavaScript 範例
+console.log("Hello, World!");
+```
+
+### ✏️ Monaco Editor
+
+支援 Monaco Editor 進行即時程式碼編輯：
+
+```python {monaco}
+# 可編輯的 Python 程式碼
+print("Hello, Slidev!")
+```
+
+### ▶️ 程式碼執行
+
+支援程式碼即時執行（JavaScript）：
+
+```js {monaco-run} {autorun: false}
+console.log("這段程式碼可以直接執行！")
+```
 
 ## 🛠️ 開發與貢獻
 
@@ -155,8 +366,8 @@ isOffline: true
 
 1. **複製專案** 📥
    ```bash
-   git clone https://github.com/CXPhoenix/slidev-theme-fhsh-aisp.git
-   cd slidev-theme-fhsh-aisp
+   git clone https://github.com/CXPhoenix/slidev-theme-fhsh-isiphs-universal.git
+   cd slidev-theme-fhsh-isiphs-universal
    ```
 
 2. **安裝依賴** 📦
@@ -173,6 +384,7 @@ isOffline: true
 4. **編輯與測試** ✍️
    - 編輯 `layouts/` 資料夾中的版面檔案
    - 修改 `styles/layout.css` 調整樣式
+   - 編輯 `shared/useTheme.js` 調整主題邏輯
    - 在 `example.md` 中測試不同的版面效果
 
 ### 📦 開發指令
@@ -187,7 +399,7 @@ pnpm run build
 # 匯出 PDF
 pnpm run export
 
-# 產生預覽圖片
+# 產生預覽圖片（PNG）
 pnpm run screenshot
 ```
 
@@ -201,7 +413,7 @@ pnpm run screenshot
 
 ### 🐛 回報問題
 
-如果您發現任何問題或有改進建議，請在 [GitHub Issues](https://github.com/CXPhoenix/slidev-theme-fhsh-aisp/issues) 中回報。
+如果您發現任何問題或有改進建議，請在 [GitHub Issues](https://github.com/CXPhoenix/slidev-theme-fhsh-isiphs-universal/issues) 中回報。
 
 ## 📚 相關連結
 
@@ -209,6 +421,7 @@ pnpm run screenshot
 - 🎬 [Slidev 官方文件](https://sli.dev/)
 - 🎨 [Slidev 主題開發指南](https://sli.dev/guide/write-theme.html)
 - 🏫 [復興高中 AI 資安學程](https://www.fhsh.tp.edu.tw/)
+- 🔐 [復興高中資訊安全課程](https://security-program.fhsh.taipei/)
 
 ## 📄 授權條款
 
@@ -218,7 +431,7 @@ pnpm run screenshot
 
 如果您有任何問題或建議，歡迎透過以下方式聯絡：
 
-- 📧 GitHub Issues: [回報問題](https://github.com/CXPhoenix/slidev-theme-fhsh-aisp/issues)
+- 📧 GitHub Issues: [回報問題](https://github.com/CXPhoenix/slidev-theme-fhsh-isiphs-universal/issues)
 - 🌐 GitHub: [@CXPhoenix](https://github.com/CXPhoenix)
 
 ---

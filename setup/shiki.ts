@@ -7,5 +7,22 @@ export default defineShikiSetup((): ShikiSetupReturn => {
       dark: 'vitesse-dark',
       light: 'vitesse-light',
     },
+    langs: [
+      "python",
+      "js",
+      "javascript",
+      "ts",
+      "typescript",
+      "html",
+      "css",
+      "c",
+      "cpp",
+      "csharp",
+      "java",
+      "rust",
+      "go",
+      "bash",
+      "shell",
+    ]
   }
 })

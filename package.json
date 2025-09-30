@@ -1,18 +1,20 @@
 {
-  "name": "@cxphoenix/slidev-theme-fhsh-aisp",
-  "version": "1.2.0",
+  "name": "@cxphoenix/slidev-theme-fhsh-isiphs-universal",
+  "version": "1.0.0",
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "https://github.com/CXPhoenix/slidev-theme-fhsh-aisp.git"
+    "url": "https://github.com/CXPhoenix/slidev-theme-fhsh-isiphs-universal.git"
   },
   "packageManager": "pnpm@10.5.2",
-  "homepage": "https://github.com/CXPhoenix/slidev-theme-fhsh-aisp#readme",
+  "homepage": "https://github.com/CXPhoenix/slidev-theme-fhsh-isiphs-universal#readme",
   "keywords": [
     "slidev-theme",
     "slidev",
     "fhsh",
-    "aisp"
+    "aisp",
+    "isip.hs",
+    "universal"
   ],
   "engines": {
     "node": ">=18.0.0"
@@ -37,13 +39,15 @@
     "colorSchema": "light",
     "defaults": {
       "fonts": {
-        "sans": "Noto Sans TC",
-        "mono": "Fira Code"
+        "sans": "edukai, Fira Mono, Noto Sans TC",
+        "serif": "Zen Antique, Noto Serif Traditional Chinese",
+        "mono": "Source Code Pro, Noto Sans Mono",
+        "local": "edukai"
       },
       "layout": "default",
       "aspectRadio": "16/9",
       "mdc": true,
-      "titleTemplate": "%s - FHSH AiSP",
+      "titleTemplate": "%s | FHSH AiSP X ISIP.hs",
       "favicon": "https://security-program.fhsh.taipei/New AiSP LOGO.png"
     }
   }

@@ -1,6 +1,12 @@
 <script setup>
-import Base from './base.vue'
-import Slogon from '../assets/slogon.svg'
+import { useSlideContext } from "@slidev/client";
+import useTheme from "../shared/useTheme";
+import Base from "./base.vue";
+
+const { $slidev } = useSlideContext();
+const { $themeImg, $customThemeConfig } = useTheme;
+
+const { slogonImg } = $themeImg($customThemeConfig($slidev.configs).themeName);
 </script>
 
 <template>
@@ -8,17 +14,21 @@ import Slogon from '../assets/slogon.svg'
     <div class="absolute" :class="$style.content">
       <slot />
     </div>
-    <img class="absolute bottom-[4%] right-[2%] w-[12%]" :src="Slogon" alt="Section Cover">
+    <img
+      class="absolute bottom-[4%] right-[2%] w-[12%]"
+      :src="slogonImg"
+      alt="Slogon Image"
+    />
   </Base>
 </template>
 
 <style module lang="postcss">
 .content {
-  @apply absolute top-[21%] left-[7%] w-[86%] h-[65%]
+  @apply absolute top-[21%] left-[7%] w-[86%] h-[65%];
 }
 
 .content h1 {
-  @apply hidden
+  @apply hidden;
 }
 
 .content h1:first-child {

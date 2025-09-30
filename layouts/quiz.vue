@@ -5,12 +5,15 @@ import { useSlideContext } from "@slidev/client";
 import { ref } from "vue";
 
 const { $frontmatter } = useSlideContext();
+const isOffline = $frontmatter.isOffline || true;
+const wsUrl = !isOffline ? ($frontmatter.wsUrl || 'ws://localhost:8000') : '';
+const ans = $frontmatter.ans || 0;
 </script>
 
 <template>
   <Default>
     <div :class="$style.quiz">
-      <MultiChoice :is-offline="$frontmatter.isOffline ?? true" :ws-url="$frontmatter.wsUrl ?? 'ws://localhost:8000'" :ans="$frontmatter.ans ?? 0"><slot></slot></MultiChoice>
+      <MultiChoice :is-offline="isOffline" :ws-url="wsUrl" :ans="ans"><slot></slot></MultiChoice>
     </div>
   </Default>
 </template>

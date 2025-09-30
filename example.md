@@ -10,6 +10,12 @@ skipPageNumberLayouts:
 ## This is a subtitle for slides
 
 ---
+
+# ToC
+
+<ToC />
+
+---
 layout: section
 ---
 
@@ -29,6 +35,8 @@ layout: section
 
 Presentation slides for developers
 
+[Hyper link](#)
+
 * hello
   * world
     * there
@@ -39,21 +47,64 @@ layout: image
 
 # Image Page
 
-![example img](/assets/section-img.png) {.transform-scale-130}
+![example img](/assets/fhsh/section-img.png) {.transform-scale-130}
+
+---
+layout: section
+---
+
+# 使用 Edukai 顯示繁體中文
+
+## 僅有中文是使用到 Edukai
+
+---
+
+# 中文字 h1
+
+# 第二行 H1 無法被看見
+
+## 這是 h2
+
+### 這是 h3
+
+這是一般內文
+
+[這是超連結](#)
+
+
+* 這是第一層
+  * 這是第二層
+    * 這是第三層
+
+
+---
+
+# 程式碼 Code
+
+```python {monaco}
+print("hello world")
+print("hi")
+```
+
+---
+
+# 程式碼 CodeRunner
+
+```js {monaco-run} {autorun: false}
+console.log("console 輸出")
+```
 
 ---
 layout: quiz
 isOffline: true
-ans: 0
+ans: 1
 ---
 
 # Question
 
-hello, this is a question {.text-sm}
-
-here here {.text-sm}
+測試用的 question
 
 - Option
-- Selected
-- Choose
-- Others
+- 挑選
+- 選擇
+- others
