@@ -1,5 +1,5 @@
 <script setup>
-import { computed } from "vue";
+import { computed } from 'vue';
 import { useSlideContext } from "@slidev/client";
 import useTheme from "../shared/useTheme";
 
@@ -15,7 +15,7 @@ const skipPageNumber = () => {
 };
 
 // bg
-const bgImg = $themeBg($customThemeConfig($slidev.configs).courseLevel);
+const bgImg = computed(() => `url("${$themeBg($customThemeConfig($slidev.configs).courseLevel).value}")`);
 
 // rt logo
 const { logo } = $themeImg($customThemeConfig($slidev.configs).themeName);

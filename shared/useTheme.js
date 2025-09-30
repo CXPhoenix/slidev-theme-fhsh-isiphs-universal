@@ -6,13 +6,13 @@ import { ref, computed } from "vue";
  * @returns { import('vue').ComputedRef<string> } css bg-image url string
  */
 const $themeBg = (courseLevel) => {
-  const courseLevelBg = ref([
-    "../assets/lv1-bg.svg",
-    "../assets/lv2-bg.svg",
-    "../assets/lv3-bg.svg",
-  ]);
+  if (courseLevel.value < 0 || courseLevel.value > 2) {
+    courseLevel.value = 0;
+  }
 
-  return computed(() => `url(${courseLevelBg.value[courseLevel.value]})`);
+  const courseLevelBgs = import.meta.glob('../assets/*.svg', { eager: true });
+
+  return computed(() => courseLevelBgs[`../assets/lv${(courseLevel.value + 1)}-bg.svg`].default);
 };
 
 /**
