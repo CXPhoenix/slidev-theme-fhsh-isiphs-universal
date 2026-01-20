@@ -217,6 +217,39 @@ layout: section
 - ✅ H2 會顯示在 H1 下方，有更大的左側 padding 和較小字體
 - 📍 文字會被定位在左側，右側有裝飾圖片
 
+### 🔧 章節圖片自訂
+
+您可以透過 `sectionImg` 與 `sectionImgStyleClass` 參數自訂章節頁面的圖片與樣式：
+
+**單頁設定**：
+```yaml
+---
+layout: section
+sectionImg: '/assets/custom-section.png'
+sectionImgStyleClass: 'right-10 w-1/2 opacity-80'
+---
+
+# 自訂章節圖片
+## 展示自訂圖片功能
+```
+
+**全域設定 (Global Config)**：
+您也可以在第一頁的 frontmatter 設定全域預設值：
+
+```yaml
+---
+sectionImg: 'https://source.unsplash.com/random/800x600'
+sectionImgStyleClass: 'right-0 w-[60%]'
+---
+```
+
+**參數說明**：
+
+| 參數 | 說明 | 預設值 |
+|------|------|--------|
+| `sectionImg` | 自訂章節圖片 URL | 主題預設圖片 (`section-img.png`) |
+| `sectionImgStyleClass` | 自訂圖片 Tailwind CSS 樣式類別 | `right-[5.5%] w-[48%]` |
+
 ### 🖼️ 圖片版面 (`image`)
 
 **用途**：以圖片為主的內容展示

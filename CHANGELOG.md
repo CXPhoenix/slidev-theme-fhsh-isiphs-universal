@@ -6,6 +6,18 @@
 
 ---
 
+## [1.1.0] - 2026-01-20
+
+### ✨ 新增功能 (Added)
+
+#### 🎨 章節版面圖片自訂
+- ✨ 新增 `sectionImg` 參數
+  - 支援從單頁 frontmatter 自訂章節圖片
+  - 支援從全域設定 (`$slidev.configs`) 設定預設圖片
+- ✨ 新增 `sectionImgStyleClass` 參數
+  - 支援自訂章節圖片的 Tailwind CSS 類別
+  - 可調整圖片位置、大小與樣式
+
 ## [1.0.1] - 2024-09-30
 
 ### ♻️ 重構 (Refactored)
