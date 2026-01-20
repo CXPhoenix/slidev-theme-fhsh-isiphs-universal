@@ -36,6 +36,4 @@ jobs:
             echo "Publishing version: $VERSION"
 
       - name: Publish to NPM 📦
-        run: pnpm publish --no-git-checks --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
+        run: pnpm publish
