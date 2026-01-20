@@ -24,6 +24,15 @@ layout: section
 ## Section Subtitle here...
 
 ---
+layout: section
+sectionImg: /assets/isip.hs/section-img.png
+---
+
+# 自訂 Section 圖片測試
+
+## 使用 isip.hs 的圖片
+
+---
 
 # Hello World
 

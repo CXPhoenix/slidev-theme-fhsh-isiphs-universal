@@ -1,13 +1,27 @@
 <script setup>
+import { computed } from "vue";
 import { useSlideContext } from "@slidev/client";
 import useTheme from "../shared/useTheme";
 import Base from "./base.vue";
+
+// 接收投影片的 frontmatter
+const props = defineProps({
+  sectionImg: {
+    type: String,
+    default: "",
+  },
+});
 
 const { $slidev } = useSlideContext();
 const { $themeImg, $customThemeConfig } = useTheme;
 
 const themeName = $customThemeConfig($slidev.configs).themeName;
-const { sectionImg } = $themeImg(themeName);
+const defaultSectionImg = $themeImg(themeName).sectionImg;
+
+// 優先順序：投影片 frontmatter > 全域 headmatter > 主題預設
+const finalSectionImg = computed(() => {
+  return props.sectionImg || $slidev.configs.sectionImg || defaultSectionImg;
+});
 </script>
 
 <template>
@@ -21,7 +35,7 @@ const { sectionImg } = $themeImg(themeName);
         'top-[45%]': themeName == 'isip.hs',
         'top-[40%]': themeName == 'fhsh',
       }"
-      :src="sectionImg"
+      :src="finalSectionImg"
       alt="Section Cover"
     />
   </Base>
