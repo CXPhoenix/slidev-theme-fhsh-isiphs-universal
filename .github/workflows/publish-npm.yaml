@@ -4,6 +4,11 @@ on:
   release:
     types: [published]
 
+permissions:
+  id-token: write
+  contents: read
+
+
 jobs:
   release:
     runs-on: ubuntu-latest
@@ -17,9 +22,12 @@ jobs:
           node-version: lts/*
           registry-url: https://registry.npmjs.org
           scope: "@cxphoenix"
-
+      
+      - name: Update NPN
+        run: npm install -g npm
+        
       - name: Install PNPM
-        run: npm install -g pnpm@10.5.2
+        run: corepack enable pnpm
 
       - name: Install dependencies 📦️
         run: pnpm install --frozen-lockfile
@@ -36,4 +44,4 @@ jobs:
             echo "Publishing version: $VERSION"
 
       - name: Publish to NPM 📦
-        run: pnpm publish
+        run: pnpm publish --access public
