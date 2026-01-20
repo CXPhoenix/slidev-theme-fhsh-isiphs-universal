@@ -10,6 +10,10 @@ const props = defineProps({
     type: String,
     default: "",
   },
+  sectionImgStyleClass: {
+    type: String,
+    default: "",
+  }
 });
 
 const { $slidev } = useSlideContext();
@@ -22,6 +26,10 @@ const defaultSectionImg = $themeImg(themeName).sectionImg;
 const finalSectionImg = computed(() => {
   return props.sectionImg || $slidev.configs.sectionImg || defaultSectionImg;
 });
+
+const finalSectionImgStyleClass = computed(() => {
+  return props.sectionImgStyleClass || $slidev.configs.sectionImgStyleClass || "right-[5.5%] w-[48%]"
+})
 </script>
 
 <template>
@@ -30,11 +38,14 @@ const finalSectionImg = computed(() => {
       <slot />
     </div>
     <img
-      class="absolute right-[5.5%] w-[48%]"
-      :class="{
-        'top-[45%]': themeName == 'isip.hs',
-        'top-[40%]': themeName == 'fhsh',
-      }"
+      class="absolute"
+      :class="[
+        {
+          'top-[45%]': themeName == 'isip.hs',
+          'top-[40%]': themeName == 'fhsh',
+        },
+        finalSectionImgStyleClass,
+      ]"
       :src="finalSectionImg"
       alt="Section Cover"
     />
