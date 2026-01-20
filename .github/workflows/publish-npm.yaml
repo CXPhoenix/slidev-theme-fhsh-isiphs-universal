@@ -25,7 +25,7 @@ jobs:
       
       - name: Update NPN
         run: npm install -g npm
-        
+
       - name: Install PNPM
         run: corepack enable pnpm
 
@@ -44,4 +44,4 @@ jobs:
             echo "Publishing version: $VERSION"
 
       - name: Publish to NPM 📦
-        run: pnpm publish --access public
+        run: pnpm publish --no-git-check --access public
